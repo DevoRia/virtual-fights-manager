@@ -1,0 +1,30 @@
+{
+  "name": "virtual-fights-manager",
+  "version": "1.0.0",
+  "description": "The virtual fights manager telegram bot ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevoRia/virtual-fights-manager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevoRia/virtual-fights-manager/issues"
+  },
+  "homepage": "https://github.com/DevoRia/virtual-fights-manager#readme",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.9",
+    "node-telegram-bot-api": "^0.50.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.14",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint": "^7.15.0"
+  }
+}
