@@ -1,4 +1,6 @@
 import {Structure} from "./structure";
+import {Photo} from "./photo.model";
+import {Document} from "./document.model";
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
@@ -7,6 +9,8 @@ export interface MessageStructure extends Structure {
   _id?: string;
   date?: number | Date;
   message_id?: number;
+  photos?: Photo[];
+  documents?: Document[];
   text?: string;
   user?: string;
   group?: string;

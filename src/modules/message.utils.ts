@@ -29,14 +29,23 @@ export class Utils {
     }
   }
 
-  static mapMessage(message: Message, user?: any, group?: any): MessageStructure {
-    return {
+  static mapMessage(message: Message): MessageStructure {
+    const messageStructure: MessageStructure = {
       message_id: message.message_id,
       text: message.text,
       date: message.date,
-      group: group ? group._id : undefined,
-      user: user ? user._id : undefined,
+      documents: []
+    };
+  
+    if (message.photo) {
+      messageStructure.photos = message.photo;
     }
+  
+    if (message.document) {
+      messageStructure.documents?.push(message.document);
+    }
+    
+    return messageStructure;
   }
 
 }

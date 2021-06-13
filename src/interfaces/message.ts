@@ -45,7 +45,7 @@ export interface Message {
       width: number,
       height: number
     },
-  }[]
+  }
   
 }
 
