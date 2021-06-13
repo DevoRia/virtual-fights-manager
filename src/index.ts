@@ -1,5 +1,6 @@
 import {Bot} from "./modules/bot";
 import {MongoConnector} from "./services/database/mongoose";
+import {Persistance} from "./services/persistance";
 
 const token: string = process.env.TOKEN as string;
 const mongoUrl: string = process.env.DATABASE as string;
@@ -10,7 +11,8 @@ class Application {
   private mongo: MongoConnector;
   
   constructor() {
-    this.bot = new Bot(token);
+    const persistance = new Persistance();
+    this.bot = new Bot(token, persistance);
     this.mongo = new MongoConnector();
   }
   
@@ -30,7 +32,6 @@ class Application {
   
   private main(): void {
     this.bot.onMessage(message => {
-      console.log(message);
     })
   }
 }
