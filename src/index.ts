@@ -32,6 +32,7 @@ class Application {
   
   private main(): void {
     this.bot.onMessage(message => {
+      this.bot.sendMessage(message.chat.id, 'I am working!')
     })
   }
 }
